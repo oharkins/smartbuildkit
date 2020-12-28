@@ -477,7 +477,7 @@ Resources:
   SBKApiUsagePlan:
     Type: 'AWS::ApiGateway::UsagePlan'
     Properties:
-      CreateUsagePlan: PER_API
+      CreateUsagePlan: PER_API #Required Item For creation of this item. 
       ApiStages:
         - ApiId: !Ref SBKApi
           Stage: Prod
