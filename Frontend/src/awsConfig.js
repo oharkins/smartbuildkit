@@ -3,9 +3,9 @@ import { Auth } from "aws-amplify";
 export default {
   Auth: {
     mandatorySignIn: true,
-    region: "",
-    userPoolId: "",
-    userPoolWebClientId: "",
+    region: "us-west-2",
+    userPoolId: "us-west-2_sft7gzkZg",
+    userPoolWebClientId: "ipoph4btm3599vl00ujdjrd7h",
   },
   // API: {
   //   endpoints: [
