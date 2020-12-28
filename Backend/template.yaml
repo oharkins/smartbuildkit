@@ -3,7 +3,7 @@ Transform: 'AWS::Serverless-2016-10-31'
 Description: An AWS Serverless Specification template describing your function.
 Globals:
   Function:
-    Runtime: python3.8
+    Runtime: python3.7
     MemorySize: 128
     Timeout: 900
     Environment:
@@ -474,19 +474,19 @@ Resources:
           SBKCognitoAuthorizer:
             UserPoolArn: !Ref CognitoUserPoolId
   
-  SBKApiUsagePlan:
-    Type: 'AWS::ApiGateway::UsagePlan'
-    Properties:
-      ApiStages:
-        - ApiId: !Ref SBKApi
-          Stage: Prod
-      Description: SBK usage plan
-      Quota:
-        Limit: 10000
-        Period: DAY
-      Throttle:
-        BurstLimit: 2000
-        RateLimit: 1000
+#  SBKApiUsagePlan:
+#    Type: 'AWS::ApiGateway::UsagePlan'
+#    Properties:
+#      ApiStages:
+#        - ApiId: !Ref SBKApi
+#          Stage: Prod
+#      Description: SBK usage plan
+#      Quota:
+#        Limit: 10000
+#        Period: DAY
+#      Throttle:
+#        BurstLimit: 2000
+#        RateLimit: 1000
 
   SBKGetUserDevices:
     Type: 'AWS::Serverless::Function'
