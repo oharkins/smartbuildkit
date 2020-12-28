@@ -10,12 +10,12 @@ import {
   faHandPaper,
   faThermometerHalf,
   faDoorClosed,
-  faChairOffice,
-  faRouter,
-  faChartNetwork,
-  faWarehouseAlt,
+  faChair,
+  faBroadcastTower,
+  faProjectDiagram,
+  faWarehouse,
   faTint,
-} from "@fortawesome/pro-light-svg-icons";
+} from "@fortawesome/free-solid-svg-icons";
 import "./Map.css";
 
 const deviceCopy = [...devices];
@@ -67,10 +67,10 @@ const Map = () => {
     { name: faHandPaper, title: "Motion" },
     { name: faThermometerHalf, title: "Temp/ Humidity" },
     { name: faDoorClosed, title: "Door/ Window" },
-    { name: faChairOffice, title: "Desk" },
-    { name: faRouter, title: "IR Blaster" },
-    { name: faChartNetwork, title: "Hub" },
-    { name: faWarehouseAlt, title: "Room" },
+    { name: faChair, title: "Desk" },
+    { name: faBroadcastTower, title: "IR Blaster" },
+    { name: faProjectDiagram, title: "Hub" },
+    { name: faWarehouse, title: "Room" },
     { name: faTint, title: "Leak" },
   ];
 
@@ -132,9 +132,9 @@ const Map = () => {
       case "ENV":
         return faThermometerHalf;
       case "DESK":
-        return faChairOffice;
+        return faChair;
       case "ROOM":
-        return faWarehouseAlt;
+        return faWarehouse;
       case "MOTION":
         return faHandPaper;
       case "LEAK":
@@ -142,9 +142,9 @@ const Map = () => {
       case "DOOR":
         return faDoorClosed;
       case "GRIDEYE":
-        return faChartNetwork;
+        return faProjectDiagram;
       case "IR":
-        return faRouter;
+        return faBroadcastTower;
     }
   };
 
